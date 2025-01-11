@@ -1,0 +1,18 @@
+public class lastindexof {
+    public static int last(String s , char ch , int i){
+        if(i== -1){
+            return -1;
+        }
+        if(s.charAt(i)==ch){
+            return i;
+        }else{
+            return last(s, ch, i-1);
+        }
+    }
+    public static void main(String[] args){
+        String s ="Shnubnhangi";
+        char ch ='n';
+        int i=s.length()-1;
+        System.out.println(last(s, ch, i));
+    }
+}
