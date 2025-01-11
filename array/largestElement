@@ -1,0 +1,16 @@
+public class LargestElement {
+    public static void largest(int arr[]) {
+        int L = Integer.MIN_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > L) {
+                L = arr[i];
+            }
+        }
+        System.out.println(L);
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 50, 30, 40};
+        largest(arr);
+    }
+}
