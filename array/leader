@@ -1,0 +1,24 @@
+package Date10062024;
+  public class Leader {
+	  public static void main(String[] args) {
+  		int[] arr = {2,5,6,3,4,8};
+  		int n = arr.length;
+  		int largest = Integer.MIN_VALUE;
+    		for (int i = 0; i < n; i++) {
+    			largest = i;
+    			for (int j = i; j < n; j++) {
+    				if(arr[largest]<arr[j]) {
+    					largest = j;
+    				}
+    			}
+    			int temp = arr[i];
+    			arr[i] = arr[largest];
+    			arr[largest] = temp;	
+    		}
+    		for (int i = 0; i < arr.length; i++) {
+    			System.out.print(arr[i]+" ");
+    		}
+  	}
+}
+
+
