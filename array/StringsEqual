@@ -1,0 +1,23 @@
+public class Equals {
+    public static boolean equal(String s1, String s2 , int n1, int n2, int idx){
+        if(idx==n1){
+            return true;
+        }
+        if(n1==n2){
+            if(s1.charAt(idx)!=s2.charAt(idx)){
+                return false;
+            }
+        }else{
+            return false;
+        }
+        return equal(s1,s2,n1,n2,idx+1);
+    } 
+    public static void main (String[] args){
+        String s1 = "abcde";
+        String s2 = "abcde";
+        int n1 = s1.length();
+        int n2 = s2.length();
+        int idx=0;
+        System.out.println(equal(s1,s2,n1,n2,idx));
+    }
+}
