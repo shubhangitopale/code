@@ -1,0 +1,21 @@
+public class endswith {
+    public static boolean find(String s , String a , int idx , int i){
+        if(i==a.length()){
+            return true;
+        }
+        if(s.charAt(idx)!=a.charAt(i)){
+            return false;
+        }else{
+            return find(s, a, idx+1, i+1);
+        }
+    }
+    public static void main(String[] args){
+         String s = "Shubhangi";
+         String a ="fgbfb";
+         int m = s.length();
+         int n = a.length(); 
+         int  idx = m-n;
+         int i=0;
+         System.out.println(find(s, a, idx , i));
+    }
+}
