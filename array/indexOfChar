@@ -1,19 +1,25 @@
-public class index {
-    public static void find(String s , char ch ,int idx){
-        if(idx == s.length() ){
+public class indexof {
+    public static void find(String s , char ch ,int i){
+        if(i>s.length()){
             System.out.println(-1);
             return ;
         }
-        if(s.charAt(idx)==ch){
-            System.out.println(idx);
+        if(i == s.length() ){
+            System.out.println(-1);
+            return ;
+        }
+        if(s.charAt(i)==ch){
+            System.out.println(i);
         }else {
-            find(s, ch, idx+1);
+            find(s, ch, i+1);
         }
     }
     public static void main(String[] args){
         String s="abcde";
-        char ch = 's';
-        int idx=0; 
-        find(s, ch, idx);
-    }
+        char ch = 'a';
+        int i=6;
+       
+//        System.out.println();  
+    find(s, ch ,i);
+    } 
 }
