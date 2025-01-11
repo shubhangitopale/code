@@ -1,0 +1,50 @@
+public class Equals2 {
+    public static boolean equal(String s1, String s2 , int n1, int n2, int idx , String s3 , String s4){
+        if(idx==n1){
+            return true;
+        }
+        if(n1==n2){
+            if(s3.charAt(idx)!=s4.charAt(idx)){
+                return false;
+            }
+        }else{
+            return false;
+        }
+        return equal(s1,s2,n1,n2,idx+1,s3,s4);
+    } 
+    public static String lowercase1(String s1 , String s3 ){
+    for (int i = 0; i < s1.length(); i++) {
+        char ch = s1.charAt(i);
+        if(ch>='A' && ch<='Z'){
+            s3+=(char)(ch+'a'-'A');
+        }
+        else {
+            s3 += ch;
+        }
+    }
+        return s3;
+    }
+    public static String lowercase2(String s2 , String s4 ){
+    for (int i = 0; i < s2.length(); i++) {
+        char ch = s2.charAt(i);
+        if(ch>='A' && ch<='Z'){
+            s4+=(char)(ch+'a'-'A');
+        }else {
+            s4 += ch;
+        }
+    }
+        return s4;
+    }
+    public static void main (String[] args){
+        String s1 = "abcde";
+        String s2 = "aBCDE";
+        String s3="";
+        String s4="";
+        int n1 = s1.length();
+        int n2 = s2.length();
+        int idx=0;
+        s3 = lowercase1(s1, s3);
+        s4 = lowercase2(s2, s4);
+        System.out.println(equal(s1,s2,n1,n2,idx,s3,s4));
+    }
+}
