@@ -1,0 +1,11 @@
+package Date10062024;
+
+public class _01 {
+	public static void main(String[] args) {		
+		int[] arr = {2,45,78,99,63,4,5,7};
+		int i=0 ;
+  		while(i<arr.length) {
+  			System.out.println(arr[i]+" element is at index "+i);
+  			i++;
+  		}
+	}
