@@ -1,0 +1,19 @@
+public class index {
+    public static void find(String s , char ch ,int idx){
+        if(idx == s.length() ){
+            System.out.println(-1);
+            return ;
+        }
+        if(s.charAt(idx)==ch){
+            System.out.println(idx);
+        }else {
+            find(s, ch, idx+1);
+        }
+    }
+    public static void main(String[] args){
+        String s="abcde";
+        char ch = 's';
+        int idx=0; 
+        find(s, ch, idx);
+    }
+}
