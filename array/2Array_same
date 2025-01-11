@@ -1,0 +1,29 @@
+package Date10062024;
+
+public class _Array1 {
+
+	public static void main(String[] args) {
+    		int[] arr1 = {1,2,55,4,77,8,5,6,14};
+    		int[] arr2 = {1,2,55,4,77,8,5,6,14};
+    		int i=0;
+    		boolean found = true;
+    		if(arr1.length == arr2.length) {
+        		while(i<arr1.length) {
+        		 if(arr1[i] == arr2[i]) {
+        			 found= true;
+        			 }
+        		 else {
+        			 found=false;
+        			 }
+        		 i++;
+    		}
+    		if(found==true) {
+    			  System.out.println("arr1 is equal to arr2");
+    		  }else {
+    		    System.out.println("arr1 is not equal to arr2");
+    		  }
+    	  } else {
+    		    System.out.println("arr1 is not equal to arr2");
+    		  }
+  	}
+}
