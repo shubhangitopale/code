@@ -1,0 +1,31 @@
+package Date10062024;
+  public class addition {
+  	public static void main(String[] args) {
+    		int[][] arr1 = {
+    				{9,8,7},
+    				{6,5,4},
+    				{3,2,1}
+    		};
+    		int[][] arr2 = {
+    				{5,6,8},
+    				{6,4,3},
+    				{1,2,0}
+    		};
+    		int n = arr1.length;
+    		int m = arr1[0].length;
+    		int[][] arr3 = new int[n][m];
+    	
+      		for (int i = 0; i < n ; i++) {
+      			for (int j = 0; j < m ; j++) {
+      				arr3[i][j] = arr1[i][j] + arr2[i][j];
+      			}
+      		}
+      		System.out.println("Result of addition: ");
+      		for (int i = 0; i < n; i++) {
+      			for (int j = 0; j < n; j++) {
+      				System.out.print(arr4[i][j]+" ");
+      			}
+      			System.out.println();
+      		}	
+  	}
+}
