@@ -1,9 +1,5 @@
 public class indexof {
     public static void find(String s , char ch ,int i){
-        if(i>s.length()){
-            System.out.println(-1);
-            return ;
-        }
         if(i == s.length() ){
             System.out.println(-1);
             return ;
@@ -16,10 +12,8 @@ public class indexof {
     }
     public static void main(String[] args){
         String s="abcde";
-        char ch = 'a';
-        int i=6;
-       
-//        System.out.println();  
-    find(s, ch ,i);
+        char ch = 'b';
+        int i=0; 
+        find(s, ch ,i);
     } 
 }
