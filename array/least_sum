@@ -1,0 +1,31 @@
+package Date10062024;
+public class _31 {
+    public static void main(String[] args) {
+        int[] arr = {3, 7, 90, 20, 5, 50, 40};
+        int k = 3; // size of sub-array
+        
+        if (arr.length < k) {
+            System.out.println("Sub-array size is larger than array size");
+            return;
+        }
+
+        int minSum = 0;
+        for (int i = 0; i < k; i++) {
+            minSum += arr[i];
+        }
+
+        int currentSum = minSum;
+        int minIndex = 0;
+
+        for (int i = k; i < arr.length; i++) {
+            currentSum += arr[i] - arr[i - k];
+
+            if (currentSum < minSum) {
+                minSum = currentSum;
+                minIndex = i - k + 1;
+            }
+        }
+        double minAvg = (double) minSum / k;
+        System.out.println("Index: " + minIndex + ", Avg: " + minAvg);
+    }
+}
